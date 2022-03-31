@@ -1,14 +1,20 @@
 //Orchestrator: Start the recipe called "drone"
+//Send to topic: Executions
 {  "@id":"2f0d7927-84ec-4334-b4ad-29b1d657ae2a",  "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Middleware/Orchestrator",  "orderId":"123456789",  "operation":"fabricateDrone", "parameters":{"recipe":"drone"}  }
 
 //ER: Move to charger
+//Send to topic: Transport
 {  "@id":"e87cba2a-d2b8-4d72-97ba-bf407fc98acb",  "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Transport/ER",  "orderId":"123456789",  "operation":"moveToCharger"}
 
 //UR: Execute operation on cell 1
+//Send to topic: Assembly
 {  "@id":"33bec44f-30d5-4716-af94-4c8f420bbba9",  "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Assembly/UR",  "orderId":"123456789",  "operation":"start",  "parameters":    {      "cellNumber":1     }   }
 
 //Effimat: Retrieve the carrier with id "1012"
+//Send to topic: Storage
 {  "@id":"d11972cc-247a-4107-b899-5e2e29ab4257",  "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Storage/Effimat",  "orderId":"123456789",  "operation":"getCarrier",  "parameters":{"productId":"1012"}}
+// 
+
 
 //ACOPOS: Start "moveAssemblyPart"
 {"@id":"5d4099b6-ce00-4c1a-8c15-386408a61c64", "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Transport/Track",  "orderId":"123456789",  "operation":"moveAssemblyPart"   }
