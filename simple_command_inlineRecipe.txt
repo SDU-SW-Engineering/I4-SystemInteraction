@@ -1,0 +1,3 @@
+// Orchestrator:Recipe for single UR execution
+// Send to topic: Executions
+{  "@id":"2f0d7927-84ec-4334-b4ad-29b1d657ae2a",  "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Middleware/Orchestrator",  "orderId":"123456789",  "operation":"fromMessage","parameters":{"orderId":"987654321", "recipe":"{\"recipeName\":\"UR1\",\"steps\":[{\"stepId\":9,\"topic\":\"Assembly\",\"command\":{\"targetId\":\"i4.sdu.dk\/Assembly\/UR\",\"operation\":\"start\",\"parameters\":{\"cellNumber\":1},\"notifications\":{\"dashboard\":\"step9Started\",\"simulation\":\"StartCell1\"}},\"response\":{\"parameters\":{\"success\":null},\"notifications\":{\"dashboard\":\"step9Executed\",\"simulation\":\"EndCell1\"}}}]}"}  }
