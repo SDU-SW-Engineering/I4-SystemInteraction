@@ -13,8 +13,8 @@
 //Effimat: Retrieve the carrier with id "1012"
 //Send to topic: Storage
 {  "@id":"d11972cc-247a-4107-b899-5e2e29ab4257",  "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Storage/Effimat",  "orderId":"123456789",  "operation":"getCarrier",  "parameters":{"productId":"1012"}}
-// 
-
+{ "@id":"9b514787-88a7-4856-a747-4f54ff1e471f" "@type":"operation" "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator" "aasTargetId":"i4.sdu.dk/Storage/Effimat" "orderId":"123456789" "operation":"returnCarrier" "parameters":{1 item "effimatReferenceId":"90985574" } }
 
 //ACOPOS: Start "moveAssemblyPart"
+//Send to topic: Transport
 {"@id":"5d4099b6-ce00-4c1a-8c15-386408a61c64", "@type":"operation",  "aasOriginId":"i4.sdu.dk/Middleware/Orchestrator",  "aasTargetId":"i4.sdu.dk/Transport/Track",  "orderId":"123456789",  "operation":"moveAssemblyPart"   }
